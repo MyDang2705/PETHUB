@@ -1,7 +1,9 @@
 /* Container chính của khung chat */
+
 .ai-chat-window {
     position: fixed;
-    bottom: 100px; /* Nằm trên nút liên hệ */
+    bottom: 100px;
+    /* Nằm trên nút liên hệ */
     right: 30px;
     width: 350px;
     height: 450px;
@@ -18,11 +20,19 @@
 }
 
 @keyframes slideInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+
 /* --- HEADER --- */
+
 .ai-chat-header {
     background: linear-gradient(135deg, #8B0000, #a00000);
     padding: 12px 16px;
@@ -56,7 +66,8 @@
 
 .ai-status {
     font-size: 11px;
-    color: #ffd700; /* Vàng */
+    color: #ffd700;
+    /* Vàng */
 }
 
 .ai-close-btn {
@@ -72,7 +83,9 @@
     opacity: 1;
 }
 
+
 /* --- BODY --- */
+
 .ai-chat-body {
     flex: 1;
     background-color: #f5f7fb;
@@ -125,7 +138,7 @@
     background-color: white;
     color: #333;
     border-radius: 12px 12px 12px 0;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .user-bubble {
@@ -135,7 +148,9 @@
     box-shadow: 0 2px 4px rgba(139, 0, 0, 0.2);
 }
 
+
 /* --- FOOTER --- */
+
 .ai-chat-footer {
     padding: 10px;
     background-color: white;
@@ -178,9 +193,12 @@
     background-color: #a00000;
 }
 
+
 /* ... Code cũ giữ nguyên ... */
 
+
 /* --- HIỆU ỨNG TYPING INDICATOR --- */
+
 .typing-indicator {
     display: flex;
     gap: 4px;
@@ -198,17 +216,33 @@
     animation: typing 1.4s infinite ease-in-out both;
 }
 
-.typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
-.typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
-.typing-indicator span:nth-child(3) { animation-delay: 0s; }
-
-@keyframes typing {
-    0%, 80%, 100% { transform: scale(0); }
-    40% { transform: scale(1); }
+.typing-indicator span:nth-child(1) {
+    animation-delay: -0.32s;
 }
 
+.typing-indicator span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0s;
+}
+
+@keyframes typing {
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+
 /* Disabled state cho nút gửi khi đang load */
-.ai-send-btn:disabled, 
+
+.ai-send-btn:disabled,
 .ai-chat-footer input:disabled {
     background-color: #ccc;
     cursor: not-allowed;
